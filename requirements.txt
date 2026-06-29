@@ -1,0 +1,1 @@
+requirements = python3==3.10.12, kivy==2.3.0, pygame, pyjnius
