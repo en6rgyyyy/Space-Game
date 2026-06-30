@@ -39,12 +39,12 @@ pygame.mixer.music.load(os.path.abspath("sound/space.mp3"))
 pygame.mixer.music.play()
 
 # Панель для кнопок
-PANEL_HEIGHT = int(HEIGHT * 0.2)  # 20% экрана для responsive
+PANEL_HEIGHT = int(HEIGHT * 0.2)
 control_panel_rect = pygame.Rect(0, HEIGHT - PANEL_HEIGHT, WIDTH, PANEL_HEIGHT)
 
 # Кнопки (responsive позиции)
 touch_controls = True
-BUTTON_SIZE = int(WIDTH * 0.1)  # 10% ширины для удобства
+BUTTON_SIZE = int(WIDTH * 0.1)
 
 left_btn = pygame.Rect(30, HEIGHT - PANEL_HEIGHT + 25, BUTTON_SIZE, BUTTON_SIZE)
 right_btn = pygame.Rect(WIDTH - 100, HEIGHT - PANEL_HEIGHT + 25, BUTTON_SIZE, BUTTON_SIZE)
@@ -257,7 +257,6 @@ class Settings:
                     if self.options[i] == "BACK":
                         self.active = False
                         return 'BACK'
-                    # Для VOLUME на touch: можно добавить кнопки +-, но пока селект. Если нужно, допили сам.
 
         return None
 
@@ -318,7 +317,7 @@ def restart_game():
     global player, enemies, SCORE, game_over
     player = Player(
         WIDTH // 2, 
-        HEIGHT - PLAYER_SIZE - PANEL_HEIGHT - 40  # Поднял еще на 20px для кнопок
+        HEIGHT - PLAYER_SIZE - PANEL_HEIGHT - 40 
     )
     enemies.clear()
     for _ in range(ENEMY_COUNT):
